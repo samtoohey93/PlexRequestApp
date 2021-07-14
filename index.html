@@ -4,8 +4,7 @@
  <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-	<title>Simple PWA</title>
-	<link rel="canonical" href="https://simplepwa.com" />
+	<title>Plex Request Tool</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	
 	<!-- Icons and Colors -->
@@ -47,13 +46,40 @@
 
 	<section>
 		<div class="container">
-			
+			<h2 class="howTo">
+				Fill out the form below, selecting either a movie or a tv show.
+				The request then gets sent to my server, and you're item put in the queue for acquisition
+			</h2>
 		</div>
+		<div class="container">
+			<form name="contact" method="POST" data-netlify="true">
+				<p>
+				  <label>Your Name: <input type="text" name="name" /></label>   
+				</p>
+				<p>
+				  <label>Your Email: <input type="email" name="email" /></label>
+				</p>
+				<p>
+				  <label>Show Type: <select name="role[]" multiple>
+					<option value="TvShow">TvShow</option>
+					<option value="Movie">Movie</option>
+				  </select></label>
+				</p>
+				<p>
+				  <label>Message: <textarea name="message"></textarea></label>
+				</p>
+				<p>
+				  <button type="submit">Send</button>
+				</p>
+			  </form>
+				
+		</div>
+
 	</section>
 
 	<footer>
 		<div class="container">
-			<p>If you find this useful, please share it, and if you can, support me directly on <a href="https://samtoohey.xyz target="_blank" rel="noopener nofollow">my website</a> Your support is greatly appreciated!&nbsp;<span class="icon heart" role="img" aria-label="Heart">&#x2764;</span></p>
+			<p>If you find this useful, please share it, and if you can, support me directly on <a href="https://samtoohey.xyz target="_blank" rel="noopener nofollow">my website</a> Your support is greatly appreciated! Built using the simple PWA framework&nbsp;<span class="icon heart" role="img" aria-label="Heart">&#x2764;</span></p>
 		</div>
 	</footer>
 
